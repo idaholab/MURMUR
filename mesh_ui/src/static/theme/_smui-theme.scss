@@ -1,0 +1,26 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// Svelte Colors!
+@use '@material/theme/index' as theme with (
+	$primary: #a4b4ba,
+	$secondary: #6e7a7e,
+	$surface: #e8e9eb,
+	$background: #fff,
+	$error: #cf1e4c
+);
+
+html,
+body {
+	background-color: #fff;
+	color: theme.$on-surface;
+	margin: 0;
+}
+
+a {
+	color: #4fb8ed;
+}
+a:visited {
+	color: color.scale(#4fb8ed, $lightness: -35%);
+}

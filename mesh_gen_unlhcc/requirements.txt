@@ -1,0 +1,7 @@
+Flask
+python-dotenv
+backports.tempfile
+scipy
+# numpy
+# damask
+flask-cors

@@ -1,0 +1,44 @@
+version: '3.9'
+services:
+  cubit:
+    build: './cubit_access'
+    restart: on-failure
+    env_file:
+      - './cubit_access/.env'
+    expose:
+      - '6969'
+    ports:
+      - '6969:6969'
+    command: "npm run dev"
+    networks:
+      - isolation-network
+  meshgen:
+    build: './mesh_gen_unlhcc'
+    env_file:
+      - './mesh_gen_unlhcc/.env'
+    ports:
+      - '6868:6868'
+    stdin_open: true
+    tty: true
+    command: "/usr/local/bin/python3.8 main.py"
+    networks:
+      - isolation-network
+    volumes:
+      - './mesh_gen_unlhcc/app:/app'
+  meshui:
+    build: './mesh_ui'
+    env_file:
+      - './mesh_ui/.env'
+    volumes:
+      - ./static:/static
+    expose:
+    - '6767'
+    ports:
+      - '6767:6767'
+    command: "npm run dev"
+    networks:
+      - isolation-network
+
+networks:
+  isolation-network:
+    driver: bridge
