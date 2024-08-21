@@ -5,8 +5,8 @@
 
 ## Prerequisites
 - Docker and Docker Compose installed. On Mac and Windows, these come bundled with [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- An INL HPC account
-- Access to the Cubit CLI Library running on a remote server accessible via SSH (contact hpcsupport@inl.gov and ask for a Cubit license on your HPC account)
+- An HPC account with Cubit installed
+- Access to the Cubit CLI Library running on a remote server accessible via SSH (if you have INL HPC access, contact hpcsupport@inl.gov and ask for a Cubit license on your account)
 
 ## Installation
 1. Clone this repository
