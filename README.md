@@ -1,3 +1,10 @@
+> [!WARNING]
+> **This repository has been archived and is no longer maintained.**
+> The code is provided for historical reference and may contain unpatched
+> or unknown vulnerabilities. It should not be used in production systems.
+
+---
+
 # MURMUR
 **M**esh Comp**U**ting **R**e**M**ote A**U**tomatic Wo**R**kflow
 
